@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to running database
-mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PW}@127.0.0.1:27017/test_db_2`, 
+mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PW}@mongodb-service:27017/test_db_2`, 
     {useNewUrlParser: true});
 
 // Register API Call
@@ -50,4 +50,4 @@ app.get('/get-user/:useremail', function(req, res) {
 });
 
 app.listen(8081);
-console.log("App is running at http://localhost:8081");
+console.log("App is running at http://user.com:8081");
