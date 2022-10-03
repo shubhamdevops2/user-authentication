@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 // Connect to running database
-mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PW}@user-service:27017/test`, 
+mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PW}@user-service:27017/admin`, 
     {useNewUrlParser: true});
 
 // Register API Call
