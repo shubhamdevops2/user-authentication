@@ -1,13 +1,13 @@
 var express = require('express');
 var app = express();
-//var cors = require('cors');
+var cors = require('cors');
 var mongoose = require('mongoose');
 var User = require('./data');
 var bodyParser = require('body-parser');
 
 // This will allow our presentation layer to retrieve data from this API without
 // running into cross-origin issues (CORS)
-//app.use(cors());
+app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to running database
